@@ -1,0 +1,6 @@
+//Interfaz realizada por Marcos Alonso Ulloa
+public interface Celda{
+    public void Inicializar(int n);
+    public void RayoCosmico(int i, int j);
+    public boolean Cortocircuito();
+}
