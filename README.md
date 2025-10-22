@@ -56,3 +56,84 @@ Durante la ejecución, el programa pedirá varios parámetros de configuración:
   - La simulación trabaja con matrices cuadradas, por lo que si introduces 2000, se generará una matriz 2000x2000.
 
   - Cuanto mayor sea el tamaño, más rayos podrán aparecer y mayor será la carga computacional.
+
+---
+
+## 🔁 Comportamiento según la opción elegida
+
+**🧪 Modo validación (S)**
+
+- Al finalizar, el programa mostrará:
+
+  - El tiempo medio de ejecución (en segundos).
+
+  - El número de rayos necesarios para provocar el cortocircuito.
+
+  - La matriz resultante, donde:
+
+    - . → celda vacía
+
+    - x → celda con rayo
+
+    - * → último rayo que ha provocado el cortocircuito
+
+**🔂 Modo no validación (N)**
+
+- Se te pedirá cuántas ejecuciones realizar.
+
+- Por cada ejecución completada, el programa imprimirá un símbolo # como indicador de progreso.
+
+- Al finalizar todas las ejecuciones, mostrará el tiempo medio de ejecución total.
+
+---
+
+## ⚙️ Optimización y mejora de rendimiento
+
+Durante el desarrollo se optimizó significativamente el rendimiento del algoritmo **Disjoint Set** mediante:
+- **Compresión de caminos (path compression)**.  
+- **Unión por rango (union by rank)**.  
+
+Estas mejoras reducen drásticamente el tiempo de ejecución en tableros grandes:
+
+| Tamaño | Tiempo sin optimizar | Tiempo optimizado |
+|:-------:|:-------------------:|:----------------:|
+| 1200×1200 | 39 s | **0.09 s** |
+| 1600×1600 | 117 s | **0.17 s** |
+| 2000×2000 | 242 s | **0.34 s** |
+
+La diferencia muestra el impacto de aplicar técnicas de optimización en estructuras de datos y bucles intensivos.
+
+---
+
+## 📊 Algoritmo empleado
+
+- **Disjoint Set (Union–Find):**
+  - Estructura eficiente para gestionar conjuntos disjuntos.
+
+  - Permite detectar la conexión entre elementos mediante compresión de caminos y unión por rango.
+
+  - Ideal para problemas de conectividad dinámica como el de los rayos entre paneles.
+ 
+---
+
+## ✨ Aprendizaje
+
+- Con este proyecto aprendí a:
+
+  - Implementar y aplicar la estructura Disjoint Set / Union–Find.
+
+  - Simular eventos aleatorios sobre una malla de datos.
+
+  - Detectar condiciones de conexión entre componentes.
+
+  - Analizar y optimizar el rendimiento de un algoritmo.
+
+  - Trabajar con código base proporcionado y ampliar su funcionalidad.
+
+  - Representar visualmente resultados mediante salidas simbólicas (matriz con ., x, *).
+
+---
+
+## 👤 Autor
+
+- Marcos Alonso Ulloa (@marcau04)
